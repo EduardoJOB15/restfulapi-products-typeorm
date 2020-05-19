@@ -12,10 +12,10 @@ export class fact_summary{
     SupplierName: string;
 
     @Column()
-    mes: string;
+    mes: number;
 
     @Column()
-    yea: string;
+    year: number;
 
     @Column()
     total: number;
@@ -27,6 +27,9 @@ export class fact_summary{
     PorcentajeVentaMensual : number;
 }
 
+export interface ISummary{
+    CustomerID : number
+}
 
 export interface IResult{
     Successed: boolean;

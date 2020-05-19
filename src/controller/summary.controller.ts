@@ -9,8 +9,9 @@ export class SummaryController{
     }
     private routes(){
         
-        this.app.route("/summary/:id")
-        .get(this.summary_service.getSummary);
-
+        this.app.route("/summary/")
+        .get(this.summary_service.fullSummary);
+        
+        this.app.route("/summary/:id").get(this.summary_service.getSummary);
     }
 }
